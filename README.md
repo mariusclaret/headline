@@ -1,4 +1,4 @@
-![Headline Icon](source/icon.png =192x192)
+![Headline Icon|medium](source/icon.png)
 
 # Headline
 
