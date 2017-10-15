@@ -1,5 +1,3 @@
-![Headline Icon|medium](source/icon.png)
-
 # Headline
 
 Get live headlines from over 40 sources including Bloomberg, The New York Times, TechCrunch, The Verge, The Washington Post and many more.
