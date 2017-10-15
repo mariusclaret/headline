@@ -1,6 +1,4 @@
-![Headline Icon](source/icon.png)
-
-<img src="source/icon.png" width="192" height="192" style="margin: 0 calc(50% - 96px)" />
+![Headline Icon](source/icon.png =192x192)
 
 # Headline
 
