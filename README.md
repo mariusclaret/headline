@@ -4,9 +4,9 @@ Get live headlines from over 40 sources including Bloomberg, The New York Times,
 
 ## API
 
-All the data displayed in the app comes from the https://newsapi.org
-Endpoint ```https://newsapi.org/v1/articles```
-Version ```v1```
+All the data displayed in the app comes from the https://newsapi.org  
+```Endpoint: https://newsapi.org/v1/articles```  
+```Version: v1```
 
 ## Touch Gestures (/script.js L112)
 
