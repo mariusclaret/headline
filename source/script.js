@@ -78,12 +78,12 @@ const storage = {
     get: function (key) {
         try {
             return localStorage.getItem(key);
-        } catch (e) {}
+        } catch (e) { }
     },
     set: function (key, value) {
         try {
             localStorage.setItem(key, value);
-        } catch (e) {}
+        } catch (e) { }
     }
 };
 
@@ -431,7 +431,7 @@ element.toolbar_tabs.onclick = function (event) {
     if (event.target.tagName !== "SPAN") return;
     if (current) current.style.color = null;
     current = event.target;
-    current.style.color = "#212121";
+    current.style.color = "var(--theme-title)";
 
     const toolbar_indicator = document.getElementById("toolbar_indicator");
 
@@ -481,7 +481,7 @@ element.content.onscroll = function () {
 document.getElementById("toolbar_favorite").onclick = function () {
     const toolbar_message = document.getElementById("toolbar_message");
     const toolbar_message_inner = document.getElementById("toolbar_message_inner");
-    toolbar_message_inner.innerHTML = "<b>" + current.innerHTML + "</b> set as default source.";
+    toolbar_message_inner.innerHTML = current.innerHTML + " set as default source.";
     toolbar_message.className = "active";
     toolbar_message_inner.style.transition = "transform 320ms";
     toolbar_message_inner.style.transform = "translateY(40px)";
@@ -526,6 +526,14 @@ document.getElementById("drawer_de").onclick = function () {
     renderSources("de");
     storage.set("country", "de");
 };
+
+window.matchMedia("(prefers-color-scheme: dark)").onchange = function () {
+    const theme = window.matchMedia("(prefers-color-scheme: dark)").matches ? "#181818" : "#FFFFFF";
+    document.querySelector("meta[name=theme-color]").setAttribute("content", theme);
+};
+
+const theme = window.matchMedia("(prefers-color-scheme: dark)").matches ? "#181818" : "#FFFFFF";
+document.querySelector("meta[name=theme-color]").setAttribute("content", theme);
 
 if (storage.get("country")) {
     document.getElementById("drawer_" + storage.get("country")).click();

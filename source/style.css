@@ -1,3 +1,19 @@
+:root {
+    --theme-surface: #FFFFFF;
+    --theme-title: #212121;
+    --theme-subtitle: #757575;
+    --theme-seperation: #EEEEEE;
+}
+
+@media (prefers-color-scheme: dark) {
+    :root {
+        --theme-surface: #181818;
+        --theme-title: #EEEEEE;
+        --theme-subtitle: #EEEEEE;
+        --theme-seperation: #282828;
+    }
+}
+
 ::-webkit-scrollbar {
     display: none;
 }
@@ -10,7 +26,7 @@ body {
     left: 0;
     padding: 0;
     margin: 0;
-    background: #FAFAFA;
+    background: var(--theme-surface);
     overflow: hidden;
     outline: none;
     cursor: default;
@@ -33,7 +49,7 @@ body {
     right: 0;
     left: 0;
     height: 104px;
-    background: #FFF;
+    background: var(--theme-surface);
     box-shadow: 0 1px 2px rgba(0, 0, 0, 0.24);
     overflow: hidden;
     transition: transform 320ms;
@@ -49,7 +65,7 @@ body {
     left: calc(50% - 35px);
     height: 24px;
     width: 70px;
-    fill: #212121;
+    fill: var(--theme-title);
 }
 
 #toolbar_drawer {
@@ -59,7 +75,7 @@ body {
     height: 24px;
     width: 24px;
     padding: 8px;
-    fill: #212121;
+    fill: var(--theme-title);
     border-radius: 50%;
     cursor: pointer;
     transition: background 320ms;
@@ -72,7 +88,7 @@ body {
     height: 24px;
     width: 24px;
     padding: 8px;
-    fill: #212121;
+    fill: var(--theme-title);
     border-radius: 50%;
     cursor: pointer;
     transition: background 320ms;
@@ -85,7 +101,7 @@ body {
     height: 24px;
     width: 24px;
     padding: 12px 24px;
-    fill: #212121;
+    fill: var(--theme-title);
     cursor: pointer;
     display: none;
 }
@@ -97,7 +113,7 @@ body {
     height: 24px;
     width: 24px;
     padding: 12px 24px;
-    fill: #212121;
+    fill: var(--theme-title);
     cursor: pointer;
     display: none;
 }
@@ -118,7 +134,7 @@ body {
     height: 24px;
     width: auto;
     padding: 12px;
-    color: #757575;
+    color: var(--theme-subtitle);
     font-size: 14px;
     font-weight: 500;
     line-height: 24px;
@@ -133,7 +149,7 @@ body {
     left: 0;
     height: 2px;
     width: 0;
-    background: #212121;
+    background: var(--theme-title);
 }
 
 #toolbar_message {
@@ -142,7 +158,7 @@ body {
     right: 0;
     bottom: 0;
     left: 0;
-    background: #FFF;
+    background: var(--theme-surface);
     opacity: 0;
     visibility: hidden;
     transition: opacity 320ms, visibility 0ms 320ms;
@@ -159,9 +175,9 @@ body {
     top: 0;
     right: 16px;
     left: 16px;
-    color: #757575;
+    color: var(--theme-title);
     font-size: 14px;
-    font-weight: 400;
+    font-weight: 500;
     line-height: 24px;
     text-align: center;
     overflow: hidden;
@@ -191,7 +207,7 @@ body {
     float: left;
     height: 52px;
     width: 100%;
-    background: #FFF;
+    background: var(--theme-surface);
     display: none;
 }
 
@@ -205,7 +221,7 @@ body {
     left: 16px;
     height: 24px;
     width: 24px;
-    fill: #212121;
+    fill: var(--theme-title);
 }
 
 #offline_text {
@@ -213,9 +229,9 @@ body {
     top: 14px;
     left: 56px;
     height: 24px;
-    color: #212121;
+    color: var(--theme-title);
     font-size: 14px;
-    font-weight: 400;
+    font-weight: 500;
     line-height: 24px;
 }
 
@@ -226,13 +242,13 @@ body {
     height: 36px;
     width: auto;
     padding: 0 12px;
-    color: #212121;
+    color: var(--theme-title);
     font-size: 14px;
     font-weight: 500;
     line-height: 36px;
     text-transform: uppercase;
     background: transparent;
-    border-radius: 2px;
+    border-radius: 8px;
     border: none;
     outline: none;
     cursor: pointer;
@@ -245,9 +261,9 @@ body {
     height: 14px;
     width: calc(100% - 32px);
     padding: 16px;
-    color: #757575;
+    color: var(--theme-subtitle);
     font-size: 14px;
-    font-weight: 400;
+    font-weight: 500;
     line-height: 16px;
 }
 
@@ -256,8 +272,7 @@ body {
     float: left;
     height: auto;
     width: 100%;
-    background: #FFF;
-    border-bottom: 1px solid #EEE;
+    border-bottom: 1px solid var(--theme-seperation);
     transition: background 320ms;
     cursor: pointer;
 }
@@ -280,9 +295,9 @@ body {
     height: auto;
     width: calc(100% - 32px);
     padding: 16px;
-    color: #212121;
+    color: var(--theme-title);
     font-size: 16px;
-    font-weight: 400;
+    font-weight: 500;
     line-height: 20px;
 }
 
@@ -292,9 +307,9 @@ body {
     height: auto;
     width: calc(100% - 32px);
     padding: 0 16px;
-    color: #757575;
+    color: var(--theme-subtitle);
     font-size: 14px;
-    font-weight: 400;
+    font-weight: 500;
     line-height: 20px;
 }
 
@@ -304,9 +319,9 @@ body {
     height: auto;
     width: calc(100% - 32px);
     padding: 16px;
-    color: #757575;
+    color: var(--theme-subtitle);
     font-size: 14px;
-    font-weight: 400;
+    font-weight: 500;
     line-height: 20px;
 }
 
@@ -334,7 +349,7 @@ body {
     width: calc(100% - 56px);
     max-width: 320px;
     padding-bottom: 8px;
-    background: #FFF;
+    background: var(--theme-surface);
     box-shadow: 1px 0 2px rgba(0, 0, 0, 0.24);
     overflow-x: hidden;
     overflow-y: scroll;
@@ -352,7 +367,7 @@ body {
     height: 144px;
     width: 100%;
     margin-bottom: 8px;
-    border-bottom: 1px solid #EEE;
+    border-bottom: 1px solid var(--theme-seperation);
 }
 
 #drawer_us {
@@ -361,14 +376,14 @@ body {
     left: 16px;
     height: 40px;
     width: 40px;
-    color: #757575;
+    color: var(--theme-title);
     font-size: 14px;
     font-weight: 500;
     line-height: 40px;
     text-align: center;
-    background: #FFF;
+    background: var(--theme-surface);
     border-radius: 50%;
-    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.24);
+    box-shadow: 0 0 0 1px var(--theme-seperation);
     cursor: pointer;
     transition: background 320ms;
 }
@@ -379,14 +394,14 @@ body {
     left: 72px;
     height: 40px;
     width: 40px;
-    color: #757575;
+    color: var(--theme-title);
     font-size: 14px;
     font-weight: 500;
     line-height: 40px;
     text-align: center;
-    background: #FFF;
+    background: var(--theme-surface);
     border-radius: 50%;
-    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.24);
+    box-shadow: 0 0 0 1px var(--theme-seperation);
     cursor: pointer;
     transition: background 320ms;
 }
@@ -397,14 +412,14 @@ body {
     left: 128px;
     height: 40px;
     width: 40px;
-    color: #757575;
+    color: var(--theme-title);
     font-size: 14px;
     font-weight: 500;
     line-height: 40px;
     text-align: center;
-    background: #FFF;
+    background: var(--theme-surface);
     border-radius: 50%;
-    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.24);
+    box-shadow: 0 0 0 1px var(--theme-seperation);
     cursor: pointer;
     transition: background 320ms;
 }
@@ -412,7 +427,7 @@ body {
 #drawer_us.active,
 #drawer_gb.active,
 #drawer_de.active {
-    color: #212121;
+    background: var(--theme-seperation);
 }
 
 #drawer_title {
@@ -420,7 +435,7 @@ body {
     right: 16px;
     bottom: 36px;
     left: 16px;
-    color: #212121;
+    color: var(--theme-title);
     font-size: 14px;
     font-weight: 500;
     line-height: 20px;
@@ -434,9 +449,9 @@ body {
     right: 16px;
     bottom: 16px;
     left: 16px;
-    color: #212121;
+    color: var(--theme-title);
     font-size: 14px;
-    font-weight: 400;
+    font-weight: 500;
     line-height: 20px;
     overflow: hidden;
     white-space: nowrap;
@@ -457,7 +472,7 @@ body {
     top: 12px;
     right: 56px;
     left: 16px;
-    color: #212121;
+    color: var(--theme-title);
     font-size: 14px;
     font-weight: 500;
     line-height: 24px;
@@ -472,7 +487,7 @@ body {
     right: 16px;
     height: 24px;
     width: 24px;
-    fill: #212121;
+    fill: var(--theme-title);
 }
 
 .article:active,
@@ -483,7 +498,7 @@ body {
 #drawer_gb:active,
 #drawer_de:active,
 #offline_action:active {
-    background: #EEE;
+    background: var(--theme-seperation);
 }
 
 noscript {
@@ -492,29 +507,29 @@ noscript {
     bottom: 24px;
     left: 24px;
     height: auto;
-    color: #212121;
+    color: var(--theme-title);
     font-size: 16px;
-    font-weight: 400;
+    font-weight: 500;
     line-height: 20px;
     text-align: center;
 }
 
 @media (min-width: 720px) {
     #content {
-        padding: 104px calc(50% - 320px) 0 calc(50% - 320px) !important;
+        padding: 104px calc(50% - 320px) 0 calc(50% - 320px);
     }
     #toolbar_drawer {
-        left: 16px !important;
+        left: 16px;
     }
     #toolbar_favorite {
-        right: 16px !important;
+        right: 16px;
     }
     #toolbar_tabs {
-        right: 72px !important;
-        left: 72px !important;
+        right: 72px;
+        left: 72px;
     }
     #toolbar_left,
     #toolbar_right {
-        display: block !important;
+        display: block;
     }
 }

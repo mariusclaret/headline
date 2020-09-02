@@ -1,4 +1,4 @@
-const cache_name = "headline-v2.0";
+const cache_name = "headline-v3.1";
 const fine_caches = [cache_name];
 const static_files = [
     "/",

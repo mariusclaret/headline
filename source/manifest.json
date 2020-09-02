@@ -1,18 +1,34 @@
 {
     "lang": "en",
-    "short_name": "Headline",
     "name": "Headline",
+    "short_name": "Headline",
     "description": "Get live headlines from over 40 sources including Bloomberg, The New York Times, TechCrunch, The Verge, The Washington Post and many more.",
-    "categories": ["news", "politics", "government"],
+    "categories": [
+        "news",
+        "politics",
+        "government"
+    ],
     "start_url": "/",
     "scope": "/",
     "theme_color": "#FFFFFF",
     "background_color": "#FFFFFF",
     "display": "standalone",
     "orientation": "portrait",
-    "icons": [{
-        "src": "/icon.png",
-        "sizes": "768x768",
-        "type": "image/png"
-    }]
+    "icons": [
+        {
+            "src": "/144.png",
+            "sizes": "144x144",
+            "type": "image/png"
+        },
+        {
+            "src": "/192.png",
+            "sizes": "192x192",
+            "type": "image/png"
+        },
+        {
+            "src": "/512.png",
+            "sizes": "512x512",
+            "type": "image/png"
+        }
+    ]
 }
